@@ -9,6 +9,7 @@ let count = 0;
 const team = []
 
 function start() {
+    console.log('🔖Welcome to the team generator!🗂')
     inquirer.prompt([
         {
             type: 'input',
@@ -32,8 +33,8 @@ function start() {
         },
         {
             type: 'list',
-            choices: ['Engineer', 'Intern', 'Done adding employees'],
-            message: 'Do you want to add employee data?',
+            choices: ['Engineer', 'Intern', 'Done adding'],
+            message: 'Which type of team member would you like to add?',
             name: 'selection'
         },
     ]).then(ans => {
@@ -62,28 +63,28 @@ function engQ() {
     inquirer.prompt([
         {
             type: 'input',
-            message: "What is the team engineer's name?",
+            message: "What is the engineer's name?",
             name: 'engineerName',
         },
         {
             type: 'input',
-            message: "What is the team engineer's id?",
+            message: "What is the engineer's id?",
             name: 'engineerId',
         },
         {
             type: 'input',
-            message: "What is the team engineer's email?",
+            message: "What is the engineer's email?",
             name: 'engineerEmail',
         },
         {
             type: 'input',
-            message: "What is the team engineer's GitHub username?",
+            message: "What is the engineer's GitHub username?",
             name: 'engineerGithub',
         },
         {
             type: 'list',
-            choices: ['Engineer', 'Intern', 'Done adding employees'],
-            message: 'Do you want to add employee data?',
+            choices: ['Engineer', 'Intern', 'Done adding'],
+            message: 'Which type of team member would you like to add?',
             name: 'selection'
         },
     ]).then(ans => {
@@ -119,28 +120,28 @@ function intQ(){
     inquirer.prompt([
         {
             type: 'input',
-            message: "What is the team intern's name?",
+            message: "What is the intern's name?",
             name: 'internName',
         },
         {
             type: 'input',
-            message: "What is the team intern's id?",
+            message: "What is the intern's id?",
             name: 'internId',
         },
         {
             type: 'input',
-            message: "What is the team intern's email?",
+            message: "What is the intern's email?",
             name: 'internEmail',
         },
         {
             type: 'input',
-            message: "What is the team intern's school?",
+            message: "What is the intern's school?",
             name: 'internSchool',
         },
         {
             type: 'list',
-            choices: ['Engineer', 'Intern', 'Done adding employees'],
-            message: 'Do you want to add employee data?',
+            choices: ['Engineer', 'Intern', 'Done adding'],
+            message: 'Which type of team member would you like to add?',
             name: 'selection'
         },
     ]).then(ans => {
