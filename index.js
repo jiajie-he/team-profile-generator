@@ -47,16 +47,8 @@ function start() {
         if(ans.selection==="Engineer"){
             engQ();
         } else if(ans.selection==="Intern"){
-            const intern = new Intern(
-                ans.internName,
-                ans.internId,
-                ans.internEmail,
-                ans.engineerSchool,
-            );
-            team.push(intern)
             intQ();
         } else {
-            console.log('goodbye')
             fs.writeFile(`./output/index.html`, generateHtml(team), (err,data) => {
                 if (err) {
                     throw err
@@ -85,7 +77,7 @@ function engQ() {
         },
         {
             type: 'input',
-            message: "What is the team engineer's GitHub profile URL?",
+            message: "What is the team engineer's GitHub username?",
             name: 'engineerGithub',
         },
         {
@@ -114,7 +106,6 @@ function engQ() {
             } else if(ans.selection==="Intern"){
                 intQ();
             } else {
-                console.log('goodbye')
                 fs.writeFile(`./output/index.html`, generateHtml(team), (err,data) => {
                     if (err) {
                         throw err
@@ -165,12 +156,12 @@ function intQ(){
             } else if(ans.selection==="Intern"){
                 intQ();
             } else {
-                console.log('goodbye')
                 fs.writeFile(`./output/index.html`, generateHtml(team), (err,data) => {
                     if (err) {
                         throw err
                     }
                     console.log('success!')
+                    console.log('goodbye')
                 })
             }
         })
